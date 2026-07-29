@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>服务维护中 · 玖帕喵</title>
-    <link rel="icon" type="image/x-icon" href="/image/1.ico">
+    <title>服务维护中 · PhaEpM</title>
+    <link rel="icon" type="image/x-icon" href="https://phaepm.com/static/favicon.ico">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -202,6 +202,51 @@
             color: var(--text-secondary);
         }
 
+        /* Action Buttons */
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.625rem;
+            margin-bottom: 1.25rem;
+        }
+        @media (max-width: 420px) {
+            .action-buttons { grid-template-columns: 1fr; }
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        }
+
+        .primary-btn {
+            background: linear-gradient(135deg, #38BDF8, #0EA5E9);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(14,165,233,0.3);
+        }
+        .primary-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(14,165,233,0.4);
+        }
+
+        .status-btn {
+            background: linear-gradient(135deg, #10B981, #059669);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(16,185,129,0.3);
+        }
+        .status-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(16,185,129,0.4);
+        }
+
         /* Contact section */
         .section-title {
             font-size: 0.75rem;
@@ -263,11 +308,13 @@
         .contact-icon.qq     { background: rgba(34,197,94,0.1);  }
         .contact-icon.tg     { background: rgba(59,130,246,0.1); }
         .contact-icon.afdian { background: rgba(168,85,247,0.1); }
+        .contact-icon.status { background: rgba(16,185,129,0.1); }
 
         html.dark .contact-icon.email  { background: rgba(56,189,248,0.12); }
         html.dark .contact-icon.qq     { background: rgba(74,222,128,0.12); }
         html.dark .contact-icon.tg     { background: rgba(96,165,250,0.12); }
         html.dark .contact-icon.afdian { background: rgba(192,132,252,0.12); }
+        html.dark .contact-icon.status { background: rgba(52,211,153,0.12); }
 
         .contact-info {
             min-width: 0;
@@ -429,6 +476,18 @@
                     <p data-i18n="notice_body">如果您看到了此页面，说明站点服务已中断。由于站点为个人维护，糯米茨可能尚未察觉到这个问题。请通过以下任意方式联系糯米茨，告知站点已宕机，以便尽快恢复服务。非常感谢！</p>
                 </div>
 
+                <!-- Action buttons -->
+                <div class="action-buttons">
+                    <a href="https://phaepm.com" class="action-btn primary-btn">
+                        <svg style="width:16px;height:16px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                        <span data-i18n="retry_btn">尝试返回主站 / 检查恢复</span>
+                    </a>
+                    <a href="https://status.jiupamiao.asia" target="_blank" rel="noopener" class="action-btn status-btn">
+                        <svg style="width:16px;height:16px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        <span data-i18n="check_status_btn">查看实时运行状态</span>
+                    </a>
+                </div>
+
                 <!-- Contact channels -->
                 <div class="section-title" data-i18n="contact_title">请通过以下方式联系糯米茨</div>
                 <div class="contact-grid">
@@ -471,6 +530,16 @@
                             <span class="contact-detail" data-i18n="afdian_detail">支持糯米茨</span>
                         </div>
                     </a>
+
+                    <a href="https://status.jiupamiao.asia" target="_blank" rel="noopener" class="contact-card" style="grid-column: 1 / -1;">
+                        <div class="contact-icon status">
+                            <svg style="width:18px;height:18px" fill="none" stroke="#10b981" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label" data-i18n="status_label">服务状态页</span>
+                            <span class="contact-detail">status.jiupamiao.asia</span>
+                        </div>
+                    </a>
                 </div>
             </div>
 
@@ -490,12 +559,15 @@
                 error_subtitle: '需要人工恢复 · 请联系糯米茨',
                 notice_title: '需要您的帮助',
                 notice_body: '如果您看到了此页面，说明站点服务已中断。由于站点为个人维护，糯米茨可能尚未察觉到这个问题。请通过以下任意方式联系糯米茨，告知站点已宕机，以便尽快恢复服务。非常感谢！',
+                retry_btn: '尝试返回主站 / 检查恢复',
+                check_status_btn: '查看实时运行状态',
                 contact_title: '请通过以下方式联系糯米茨',
                 email_label: '邮箱',
                 qq_label: 'QQ 群',
                 tg_detail: '群组',
                 afdian_label: '爱发电',
                 afdian_detail: '支持糯米茨',
+                status_label: '服务状态页',
                 footer: '个人维护站点 · 感谢您帮忙通知，糯米茨会尽快恢复'
             },
             en: {
@@ -504,12 +576,15 @@
                 error_subtitle: 'Manual recovery needed · Please contact NuoMiCi',
                 notice_title: 'Your help is needed',
                 notice_body: 'If you are seeing this page, it means the site is currently down. Since this is a solo-maintained project, NuoMiCi may not yet be aware of the issue. Please use any of the contact methods below to let NuoMiCi know, so the service can be restored as soon as possible. Thank you!',
+                retry_btn: 'Return to Main Site / Check',
+                check_status_btn: 'Check Live Status',
                 contact_title: 'Please contact NuoMiCi via',
                 email_label: 'Email',
                 qq_label: 'QQ Group',
                 tg_detail: 'Group',
                 afdian_label: 'Afdian',
                 afdian_detail: 'Support NuoMiCi',
+                status_label: 'Status Page',
                 footer: 'Solo-maintained site · Thank you for helping, NuoMiCi will restore ASAP'
             },
             ja: {
@@ -518,12 +593,15 @@
                 error_subtitle: '手動復旧が必要 · ヌオミツィにご連絡ください',
                 notice_title: 'ご協力をお願いします',
                 notice_body: 'このページが表示されている場合、サイトのサービスが停止しています。個人で運営しているため、ヌオミツィはまだこの問題に気づいていない可能性があります。以下のいずれかの方法でヌオミツィに連絡し、サイトがダウンしていることをお知らせください。できるだけ早く復旧いたします。ありがとうございます！',
+                retry_btn: 'メインサイトに戻る / 復旧確認',
+                check_status_btn: 'リアルタイムステータス確認',
                 contact_title: '以下の方法でヌオミツィにご連絡ください',
                 email_label: 'メール',
                 qq_label: 'QQ グループ',
                 tg_detail: 'グループ',
                 afdian_label: '爱发电',
                 afdian_detail: 'ヌオミツィを支援',
+                status_label: 'ステータスページ',
                 footer: '個人運営サイト · お知らせいただきありがとうございます、早急に復旧いたします'
             },
             ko: {
@@ -532,12 +610,15 @@
                 error_subtitle: '수동 복구 필요 · 누오미츠에게 연락해 주세요',
                 notice_title: '도움이 필요합니다',
                 notice_body: '이 페이지가 보인다면 사이트 서비스가 중단된 상태입니다. 개인이 운영하는 사이트라 누오미츠가 아직 이 문제를 인지하지 못했을 수 있습니다. 아래 연락 방법 중 하나를 통해 사이트가 다운되었음을 알려주시면 최대한 빨리 복구하겠습니다. 감사합니다!',
+                retry_btn: '메인 사이트로 이동 / 복구 확인',
+                check_status_btn: '실시간 서비스 상태 확인',
                 contact_title: '아래 방법으로 누오미츠에게 연락해 주세요',
                 email_label: '이메일',
                 qq_label: 'QQ 그룹',
                 tg_detail: '그룹',
                 afdian_label: '爱发电',
                 afdian_detail: '누오미츠 후원',
+                status_label: '서비스 상태 페이지',
                 footer: '개인 운영 사이트 · 알려주셔서 감사합니다, 최대한 빨리 복구하겠습니다'
             }
         };
