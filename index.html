@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>服务维护中 · PhaEpM</title>
-    <link rel="icon" type="image/x-icon" href="/image/1.ico">
+    <link rel="icon" type="image/x-icon" href="https://phaepm.com/static/favicon.ico">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -414,8 +414,8 @@
                     </svg>
                 </div>
                 <div class="error-code" data-i18n="error_code">50x</div>
-                <div class="error-title" data-i18n="error_title">服务暂时不可用</div>
-                <div class="error-subtitle"><span class="status-dot"></span><span data-i18n="error_subtitle">维护中 · 正在恢复</span></div>
+                <div class="error-title" data-i18n="error_title">站点服务中断</div>
+                <div class="error-subtitle"><span class="status-dot"></span><span data-i18n="error_subtitle">需要人工恢复 · 请联系糯米茨</span></div>
             </div>
 
             <!-- Body -->
@@ -424,13 +424,13 @@
                 <div class="notice-block">
                     <div class="notice-header">
                         <span>⚠️</span>
-                        <strong data-i18n="notice_title">故障说明</strong>
+                        <strong data-i18n="notice_title">需要您的帮助</strong>
                     </div>
-                    <p data-i18n="notice_body">因服务器提供商网络波动，站点出现了暂时瘫痪的情况。由于站点为个人维护，无法第一时间发现并处理，非常抱歉给大家带来不便。正在全力恢复中，请稍后再试。</p>
+                    <p data-i18n="notice_body">如果您看到了此页面，说明站点服务已中断。由于站点为个人维护，糯米茨可能尚未察觉到这个问题。请通过以下任意方式联系糯米茨，告知站点已宕机，以便尽快恢复服务。非常感谢！</p>
                 </div>
 
                 <!-- Contact channels -->
-                <div class="section-title" data-i18n="contact_title">联系方式 · 也欢迎来交流</div>
+                <div class="section-title" data-i18n="contact_title">请通过以下方式联系糯米茨</div>
                 <div class="contact-grid">
                     <a href="mailto:luocibai2@gmail.com" class="contact-card">
                         <div class="contact-icon email">
@@ -476,7 +476,7 @@
 
             <!-- Footer -->
             <div class="card-footer">
-                <p data-i18n="footer">个人维护站点 · 感谢大家的理解与支持</p>
+                <p data-i18n="footer">个人维护站点 · 感谢您帮忙通知，糯米茨会尽快恢复</p>
             </div>
         </div>
     </div>
@@ -486,59 +486,59 @@
         var I18N = {
             zh: {
                 error_code: '50x',
-                error_title: '服务暂时不可用',
-                error_subtitle: '维护中 · 正在恢复',
-                notice_title: '故障说明',
-                notice_body: '因服务器提供商网络波动，站点出现了暂时瘫痪的情况。由于站点为个人维护，无法第一时间发现并处理，非常抱歉给大家带来不便。正在全力恢复中，请稍后再试。',
-                contact_title: '联系方式 · 也欢迎来交流',
+                error_title: '站点服务中断',
+                error_subtitle: '需要人工恢复 · 请联系糯米茨',
+                notice_title: '需要您的帮助',
+                notice_body: '如果您看到了此页面，说明站点服务已中断。由于站点为个人维护，糯米茨可能尚未察觉到这个问题。请通过以下任意方式联系糯米茨，告知站点已宕机，以便尽快恢复服务。非常感谢！',
+                contact_title: '请通过以下方式联系糯米茨',
                 email_label: '邮箱',
                 qq_label: 'QQ 群',
                 tg_detail: '群组',
                 afdian_label: '爱发电',
                 afdian_detail: '支持糯米茨',
-                footer: '个人维护站点 · 感谢大家的理解与支持'
+                footer: '个人维护站点 · 感谢您帮忙通知，糯米茨会尽快恢复'
             },
             en: {
                 error_code: '50x',
-                error_title: 'Service Temporarily Unavailable',
-                error_subtitle: 'Maintenance · Recovering',
-                notice_title: 'What happened',
-                notice_body: 'The site went down due to network fluctuations from the server provider. As this is a solo-maintained project, the issue could not be detected and resolved immediately — sincere apologies for the inconvenience. We are working to restore service, please try again later.',
-                contact_title: 'Contact · Get in touch',
+                error_title: 'Site Service Interrupted',
+                error_subtitle: 'Manual recovery needed · Please contact NuoMiCi',
+                notice_title: 'Your help is needed',
+                notice_body: 'If you are seeing this page, it means the site is currently down. Since this is a solo-maintained project, NuoMiCi may not yet be aware of the issue. Please use any of the contact methods below to let NuoMiCi know, so the service can be restored as soon as possible. Thank you!',
+                contact_title: 'Please contact NuoMiCi via',
                 email_label: 'Email',
                 qq_label: 'QQ Group',
                 tg_detail: 'Group',
                 afdian_label: 'Afdian',
                 afdian_detail: 'Support NuoMiCi',
-                footer: 'Solo-maintained site · Thank you for your patience and support'
+                footer: 'Solo-maintained site · Thank you for helping, NuoMiCi will restore ASAP'
             },
             ja: {
                 error_code: '50x',
-                error_title: 'サービス一時停止中',
-                error_subtitle: 'メンテナンス中 · 復旧作業中',
-                notice_title: '障害のご説明',
-                notice_body: 'サーバー提供元のネットワーク障害により、サイトが一時的にダウンしました。個人で運営しているため、問題の発見と対応が遅れてしまい大変申し訳ございません。現在全力で復旧中です、しばらくお待ちください。',
-                contact_title: 'お問い合わせ',
+                error_title: 'サイトサービス中断',
+                error_subtitle: '手動復旧が必要 · ヌオミツィにご連絡ください',
+                notice_title: 'ご協力をお願いします',
+                notice_body: 'このページが表示されている場合、サイトのサービスが停止しています。個人で運営しているため、ヌオミツィはまだこの問題に気づいていない可能性があります。以下のいずれかの方法でヌオミツィに連絡し、サイトがダウンしていることをお知らせください。できるだけ早く復旧いたします。ありがとうございます！',
+                contact_title: '以下の方法でヌオミツィにご連絡ください',
                 email_label: 'メール',
                 qq_label: 'QQ グループ',
                 tg_detail: 'グループ',
                 afdian_label: '爱发电',
                 afdian_detail: 'ヌオミツィを支援',
-                footer: '個人運営サイト · ご理解とご支援に感謝いたします'
+                footer: '個人運営サイト · お知らせいただきありがとうございます、早急に復旧いたします'
             },
             ko: {
                 error_code: '50x',
-                error_title: '서비스 일시 중단',
-                error_subtitle: '유지보수 중 · 복구 진행 중',
-                notice_title: '장애 안내',
-                notice_body: '서버 제공업체의 네트워크 변동으로 인해 사이트가 일시적으로 다운되었습니다. 개인이 운영하는 사이트라 문제를 신속하게 감지하고 처리하지 못해 진심으로 사과드립니다. 현재 전력으로 복구 중이니 잠시 후 다시 시도해 주세요.',
-                contact_title: '연락처 · 문의',
+                error_title: '사이트 서비스 중단',
+                error_subtitle: '수동 복구 필요 · 누오미츠에게 연락해 주세요',
+                notice_title: '도움이 필요합니다',
+                notice_body: '이 페이지가 보인다면 사이트 서비스가 중단된 상태입니다. 개인이 운영하는 사이트라 누오미츠가 아직 이 문제를 인지하지 못했을 수 있습니다. 아래 연락 방법 중 하나를 통해 사이트가 다운되었음을 알려주시면 최대한 빨리 복구하겠습니다. 감사합니다!',
+                contact_title: '아래 방법으로 누오미츠에게 연락해 주세요',
                 email_label: '이메일',
                 qq_label: 'QQ 그룹',
                 tg_detail: '그룹',
                 afdian_label: '爱发电',
                 afdian_detail: '누오미츠 후원',
-                footer: '개인 운영 사이트 · 이해와 성원에 감사드립니다'
+                footer: '개인 운영 사이트 · 알려주셔서 감사합니다, 최대한 빨리 복구하겠습니다'
             }
         };
 
